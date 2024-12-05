@@ -1,0 +1,124 @@
+/*
+CSS RESETS:
+ Border box reset:
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ 62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
+*/
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+ }
+ 
+ 
+ *,
+ *:before,
+ *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ 
+ html,
+ body {
+    height: 100%;
+ }
+ 
+ 
+ body {
+     font-size: 1.6rem;
+    /* font-size 1.6rem is now the same as 16px */
+    line-height: 1.6;
+    background-color: black;
+ }
+/* //////////////////////////////////////////////////////// */
+
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  background:#111;
+  font-family:"Oswald",sans-serif;
+}
+.text-animation {
+  color:#fff;
+  opacity:0;
+}
+.text-animation span {
+  position:relative;
+  top:10px;
+  left:10px;
+  font-size:100px;
+  font-weight:600;
+  opacity:0;
+  text-transform:uppercase;
+  animation:fade 400ms ease-in-out forwards;
+}
+.center {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+@keyframes fade {
+  0% {
+    top:10px;
+    left:10px;
+    filter:blur(15px);
+    opacity:0;
+  }
+  50% {
+    filter:blur(10px);
+    opacity:0.9;
+  }
+  100% {
+    top:0px;
+    left:0px;
+    filter:blur(0px);
+    opacity:1;
+  }  
+}
+
+/*/////////////*/
+
+a {
+   text-decoration: none;
+   font-weight:600;
+   color: lightblue;
+   font-size: 25px;
+   font-family: sans-serif
+}
+
+a:hover {
+   color: darkred;
+}
+
+
+
+/* this is mobile-first - meaning all the rest of the CSS is for mobile, and this CSS is specific to browser screens */
+@media screen and (max-width:650px) {
+
+   /* change padding for mobile */
+   .content-wrapper {
+       padding: 20px;
+   }
+
+   main {
+       padding: 20px;
+   }
+   
+   /* to switch to grid for desktop: */
+   main {
+       flex-direction: column;
+       flex-wrap: nowrap;
+       justify-content: center;
+   }
+   
+   section {
+       flex: 0 1 auto;
+   }
+
+}

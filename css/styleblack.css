@@ -1,0 +1,127 @@
+/*
+CSS RESETS:
+ Border box reset:
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ 62.5% Fix: https: //www.aleksandrhovhannisyan.com/blog/62-5-percent-font-size-trick/
+*/
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+ }
+ 
+ 
+ *,
+ *:before,
+ *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ 
+ html,
+ body {
+    height: 100%;
+ }
+ 
+ 
+ body {
+     font-size: 24px;
+    /* font-size 1.6rem is now the same as 16px */
+    line-height: 1.6;
+    background-color: black;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0px;
+    color: white;
+ }
+/* //////////////////////////////////////////////////////// */
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 40%; /* Center vertically */
+    left: 5%; /* Place it on the left half */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    z-index: 2; /* Higher than the image */
+    text-align: left; /* Align text to the left */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 40%; /* Prevent the text container from being too wide */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center; /* Center content vertically */
+    flex-wrap: wrap; /* Allow content to wrap inside the container */
+    
+    
+}
+
+.text-overlay p {
+    margin-bottom: 20px;
+}
+
+.charon {
+    color: #ff0000;
+    font-style: italic;
+}
+
+.daughter {
+    color: #ff00f2;
+    font-style: italic;
+}
+
+.wife {
+    color: #921dff;
+    font-style: italic;
+}
+
+.employer {
+    color: #9b9b9b;
+    font-style: italic;
+}
+
+.progress {
+    color: rgb(255, 166, 0);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1abc9c;
+}
